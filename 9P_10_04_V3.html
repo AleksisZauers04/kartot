@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>3. vingrinājums</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+  background-color: #ffe699;
+  font-family: "Verdana";}
+		</style>
+	</head>
+	<body>
+<h2>Skaitlisku masīvu sakārtošana</h2>
+<h3>Bez salīdzināšanas funkcijas</h3>
+<p id = "pirms1">...</p>
+<p id = "pec1">...</p>
+<h3>Ar salīdzināšanas funkciju, augošā secībā</h3>
+<p id = "pirms2">...</p>
+<p id = "pec2">...</p>
+<h3>Ar salīdzināšanas funkciju, dilstošā secībā</h3>
+<p id = "pirms3">...</p>
+<p id = "pec3">...</p>
+		<script>
+var mas1 = [11,5,52,1,34,8,-10,17,-62,83];
+var mas2 = [11,5,52,1,34,8,-10,17,-62,83];
+var mas3 = [11,5,52,1,34,8,-10,17,-62,83];
+pirms1.innerHTML = mas1.join("; ");
+mas1.sort();
+pec1.innerHTML = mas1.join("; ");
+pirms2.innerHTML = mas2.join("; ");
+mas2.sort(function(a, b){return a - b;});
+pec2.innerHTML = mas2.join("; ");
+pirms3.innerHTML = mas3.join("; ");
+mas3.sort(function(a, b){return b - a;});
+pec3.innerHTML = mas3.join("; ");
+		</script>
+	</body>
+</html>

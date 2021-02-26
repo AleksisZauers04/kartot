@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>2. patstāvīgais darbs</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+  background-color: #ffccff;
+  font-family: "Verdana";}
+		</style>
+	</head>
+	<body>
+<h2>Rezultāti tāllēkšanā</h2>
+<p>Visi:</p>
+<p id = "izvade1">...</p>
+<p>Pieci labākie rezultāti:</p>
+<p id = "izvade2">...</p>
+		<script>
+var rezultati = [4.2,3.32,3.64,3,3.59,3.44,4.51,
+                 4.41,3.81,3.78,3.52,3.24,3.15,
+                 2.9,3.2,3.56,3.61,3.17,3.18];
+var sakartots = [];
+var i, teksts;
+
+izvade1.innerHTML = rezultati.join("; ");
+for (i = 0; i < rezultati.length; i++) {
+  sakartots.push(rezultati[i]); 
+}
+sakartots.sort(function(a, b){return b - a;});
+teksts = sakartots[0];
+for (i = 1; i < 5; i++) {
+  teksts = teksts + "; "+ sakartots[i]; 
+}
+izvade2.innerHTML = teksts;
+		</script>
+	</body>
+</html>

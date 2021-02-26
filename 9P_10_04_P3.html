@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>3. patstāvīgais darbs</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+  background-color: #b3ffec;
+  font-family: "Verdana";}
+		</style>
+	</head>
+	<body>
+<h2>Saraksta papildināšana</h2>
+<p> Pievienojamais vārds: <input type="text" id="ievade" size = "20">
+<button onclick="pievienot()">
+    Pievienot
+  </button>
+</p>
+<p>Latvijas meža dzīvnieki:</p>
+<p id = "izvade">...</p>
+		<script>
+var saraksts = ["ALNIS"];
+izvade.innerHTML = saraksts.join("; ");
+
+function pievienot() {
+  vards = ievade.value.toLocaleUpperCase();
+  saraksts.push(vards);
+  saraksts.sort(function(a, b){return a.localeCompare(b);});
+  izvade.innerHTML = saraksts.join("; ");
+}
+		</script>
+	</body>
+</html>

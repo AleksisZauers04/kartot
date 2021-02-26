@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>1. patstāvīgais darbs</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+  background-color: #b3b3ff;
+  font-family: "Verdana";}
+		</style>
+	</head>
+	<body>
+<h2>Loterijas izloze</h2>
+<p>Laimējušie numuri:</p>
+<p id = "izvade1">...</p>
+		<script>
+var biletes = [], izloze = [];
+var indekss;
+var skaits = 36;
+for (i = 1; i <= skaits; i++) {
+  biletes.push(i);
+}
+for (i = 0; i < 5; i++) {
+  indekss = Math.floor(Math.random() * biletes.length);
+  izloze.push(biletes[indekss]);
+  biletes.splice(indekss,1);
+}
+izloze.sort(function(a, b){return a - b;});
+izvade1.innerHTML = izloze.join(" ");
+		</script>
+	</body>
+</html>

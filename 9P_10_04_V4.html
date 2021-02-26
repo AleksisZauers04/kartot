@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>4. vingrinājums</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+  background-color:  #ffb3b3;
+  font-family: "Verdana";}
+		</style>
+	</head>
+	<body>
+<h2>Simbolu virkņu masīvu sakārtošana</h2>
+<h3>Bez salīdzināšanas funkcijas</h3>
+<p id = "pirms1">...</p>
+<p id = "pec1">...</p>
+<h3>Salīdzinot tāpat kā skaitļus</h3>
+<p id = "pirms2">...</p>
+<p id = "pec2">...</p>
+<h3>Salīdzinot, izmantojot metodi <i>localeCompare</i> </h3>
+<p id = "pirms3">...</p>
+<p id = "pec3">...</p>
+		<script>
+var mas1 = ["Laura", "Ēriks", "Aigars", "Aiga", "Gunita", "Aldis"];
+var mas2 = ["Laura", "Ēriks", "Aigars", "Aiga", "Gunita", "Aldis"];
+var mas3 = ["Laura", "Ēriks", "Aigars", "Aiga", "Gunita", "Aldis"];
+
+pirms1.innerHTML = mas1.join("; ");
+mas1.sort();
+pec1.innerHTML = mas1.join("; ");
+pirms2.innerHTML = mas2.join("; ");
+mas2.sort(function(a, b){return a - b;});
+pec2.innerHTML = mas2.join("; ");
+pirms3.innerHTML = mas3.join("; ");
+mas3.sort(function(a, b){return a.localeCompare(b);});
+pec3.innerHTML = mas3.join("; ");
+		</script>
+	</body>
+</html>

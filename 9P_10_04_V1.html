@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>1. vingrinājums</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+  background-color: #99e6e6 ;
+  font-family: "Verdana";}
+
+		</style>
+	</head>
+	<body>
+<h2>Simbolu virkņu masīvu kārtošana</h2>
+<h3>1. masīvs</h3>
+<p id = "pirms1">...</p>
+<p id = "pec1">...</p>
+<h3>2. masīvs</h3>
+<p id = "pirms2">...</p>
+<p id = "pec2">...</p>
+<h3>3. masīvs</h3>
+<p id = "pirms3">...</p>
+<p id = "pec3">...</p>
+		<script>
+var mas1 = ["Laura", "Ēriks", "Aigars", "Aiga", "Gunita", "Aldis"];
+var mas2 = ["A","Ā","B","C","Č","D","E","Ē","F","G","Ģ",
+            "H","I","Ī","J","K","Ķ","L","Ļ","M","N","Ņ",
+            "O","P","R","S","Š","T","U","Ū","V","Z","Ž"];
+var mas3 = ["9B. klase", "9A. kl.","9.klase", "9. klase",
+            "9A. klase", "10. klase"];
+pirms1.innerHTML = mas1;
+mas1.sort();
+pec1.innerHTML = mas1;
+pirms2.innerHTML = mas2;
+mas2.sort();
+pec2.innerHTML = mas2;
+pirms3.innerHTML = mas3;
+mas3.sort();
+pec3.innerHTML = mas3;
+		</script>
+	</body>
+</html>

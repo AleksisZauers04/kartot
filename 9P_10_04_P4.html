@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>4. patstāvīgais darbs</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+  background-color: #ddff99;
+  font-family: "Verdana";}
+		</style>
+	</head>
+	<body>
+<h2>Skaitļu virknes analīze</h2>
+<p> Pārbaudāmā skaitļu virkne: <input type="text" id="ievade" size = "60"> </p>
+<p><button onclick="parbaudit()">
+    Pārbaudīt
+  </button>
+</p>
+<p id = "izvade">...</p>
+		<script>
+function parbaudit() {
+  var saraksts = [], augoss = [], dilstoss = [];
+  var aug = true, dilst = true;
+  var i, virkne, teksts;
+  virkne = ievade.value.trim();
+  saraksts = virkne.split(",");
+  for (i = 0; i < saraksts.length; i++) {
+    augoss[i] = saraksts[i];
+    dilstoss[i] = saraksts[i];
+  }
+  augoss.sort(function(a, b){return a - b;});
+  dilstoss.sort(function(a, b){return b - a;});
+  for (i = 0; i < saraksts.length; i++) {
+    if (augoss[i] != saraksts[i]) {
+      aug = false;
+    }
+    if (dilstoss[i] != saraksts[i]) {
+      dilst = false;
+    }
+  }
+  teksts = "Skaitļi nav sakārtoti.";
+  if (aug && dilst) {
+    teksts = "Skaitļi ir sakārtoti gan augošā, gan dilstošā secībā.";
+  } else if (aug) {
+    teksts = "Skaitļi ir sakārtoti augošā secībā.";
+  } else if (dilst){
+    teksts = "Skaitļi ir sakārtoti dilstošā secībā.";
+  }
+  izvade.innerHTML = teksts;
+}
+		</script>
+	</body>
+</html>
